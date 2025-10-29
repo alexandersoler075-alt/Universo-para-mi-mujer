@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxia de Amor by AlexDev</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+        "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+        "three/examples/jsm/loaders/FontLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/FontLoader.js",
+        "three/examples/jsm/geometries/TextGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TextGeometry.js"
+      }
+    }
+  </script>
+</head>
+<body class="intro-started">
+  <div id="intro-screen">
+    <div class="intro-content">
+      <h1>💫 Para Ti 💖</h1>
+      <p>Toca el planeta para entrar a nuestra galaxia 🌌</p>
+      <button id="enter-btn">Entrar</button>
+    </div>
+  </div>
+  <div id="container"></div>
+  <div id="landscape-warning">
+    <div class="warning-content">
+      <div class="rotate-icon"></div>
+      <h1>Love</h1>
+      <h1>Planeta</h1>
+      <p style="font-size: 0.6em;">Por favor, gire el planeta para un lado!</p>
+      <p style="font-size: 0.6em;">clic para abrir el planeta</p>
+      <div class="stars-bg"></div>
+    </div>
+  </div>
+  <div id="dark-overlay"></div>
+  <div id="info"></div>
+  <script type="module" src="script.js"></script>
+  <script>
+    const introScreen = document.getElementById('intro-screen');
+    const enterBtn = document.getElementById('enter-btn');
+    enterBtn.addEventListener('click', () => {
+      introScreen.style.opacity = '0';
+      setTimeout(() => introScreen.style.display = 'none', 1000);
+    });
+  </script>
+</body>
+</html>
